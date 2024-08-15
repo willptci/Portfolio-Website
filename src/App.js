@@ -1,23 +1,40 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import PortfolioHeader from './PortfolioHeader';
+import SearchAlgoLink from './SearchAlgoLink';
+import TalkingMojoLink from './TalkingMojoLink';
+import TalkingMojo from './TalkingMojo';
+import SpotifyWrapped from './SpotifyWrappedLink';
+import SpotifyWrappedLink from './SpotifyWrappedLink';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Portfolio">
+      <PortfolioHeader />
+      <div className="Site-Collection">
+        <Routes>
+          {/* Home route which contains the original content */}
+          <Route 
+            path="/" 
+            element={
+              <>
+                <div className="pair-container">
+                  <SearchAlgoLink />
+                  <TalkingMojoLink />
+                </div>
+                <div className="pair-container">
+                  <SpotifyWrappedLink />
+                </div>
+              </>
+            } 
+          />
+          <Route path="/TalkingMojo" element={<TalkingMojo />} />
+          <Route path="/SpotifyWrapped" element={<SpotifyWrapped />} />
+          {/* Redirect all other paths to Home */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </div>
     </div>
   );
 }

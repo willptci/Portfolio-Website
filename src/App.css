@@ -1,10 +1,19 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+.Portfolio {
   text-align: center;
 }
 
+.Site-Collection {
+  margin-top: 3%;
+  display: flex;
+}
+
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 20vmin;
+  width: 20vmin;
+  margin-left: 20px;
+  margin-top: 1%;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,15 +22,77 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Port-header {
+  background-color: #eaeffa;
+  flex-direction: column;
+  font-size: calc(14px + 2vmin);
+  color: rgb(44, 36, 36);
+}
+
+.Name-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000;
+}
+
+.Name {
+  font-size: calc(40px + 4vmin);
+  margin-bottom: 20px;
+  margin-top: 5%;
+  margin-left: -20px;
+}
+
+.Header-links {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  padding-right: 4%;
+  margin-top: 3%;
   align-items: center;
+}
+
+.Header-links a {
+  text-decoration: none;
+  color: rgb(44, 36, 36);
+  font-size: calc(8px + 2vmin);
+  display: flex;
+  align-items: center;
+}
+
+.Top-links {
+  display: flex;
+  gap: 20px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+
+.Bottom-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.link-logo {
+  height: 3vmin;
+  width: 3vmin;
+  margin-right: 5px;
+}
+
+.Introduction {
+  font-size: calc(6px + 2vmin)
+}
+
+.Introduction-container {
+  margin-top: 4.5%;
+  margin-left: 30px;
+}
+
+.Introduction-container p {
+  margin: 0;
+}
+
+.Georgia-tech {
+  color: rgb(208, 177, 1);
 }
 
 .App-link {
@@ -35,4 +106,114 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.background-container {
+  text-align: center;
+  padding: 30px;
+}
+
+a, .background-container {
+  text-decoration: none; 
+  color: inherit;        
+  display: block;        
+}
+
+.background-container img {
+  display: block;
+}
+
+.pair-container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.search-algo-image {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.talking-mojo-image {
+  width: 100%;
+  max-width: 600px;
+  height: 327.5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.mojo-page {
+  min-height: 1000px;
+}
+
+.mojo-description-vid {
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.mojo-description {
+  margin-left: 3%;
+}
+
+.title {
+  font-size: calc(40px + 4vmin);
+}
+
+.mojo-input-image {
+  display: flex;
+  margin-left: 7%;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-message {
+  flex: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload-image-title {
+  font-size: calc(20px + 2vmin);
+  text-align: left;
+  margin-left: 5%;
+}
+
+.image-preview {
+  max-width: 400px;
+  margin-left: 7%;
+  flex-direction: column; /* Stack its children vertically */
+  justify-content: center;
+  align-items: center;
+}
+
+.button-vid-container {
+  display: flex;
+  margin-left: 10%;
+  margin-top: 50px;
+}
+
+.video-feed-container {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-right: 20%;
+  margin-left: 20%;
+}
+
+.upload-buttons {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 10px;
+}
+
+.android-app-img {
+  width: 100%;
+  max-width: 575px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
