@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Portfolio-Website/static/css/main.94941bb3.css",
+    "main.js": "/Portfolio-Website/static/js/main.d7c9eb61.js",
+    "static/js/453.2fa4fd9b.chunk.js": "/Portfolio-Website/static/js/453.2fa4fd9b.chunk.js",
+    "static/media/MojoVid.mp4": "/Portfolio-Website/static/media/MojoVid.c7de7d921c047c4c87a3.mp4",
+    "static/media/Mojo-Cam.png": "/Portfolio-Website/static/media/Mojo-Cam.51c3941e9ad8e693c816.png",
+    "static/media/AndroidApp.png": "/Portfolio-Website/static/media/AndroidApp.bf552145bc4a05b99120.png",
+    "static/media/SearchAlgo-Example.png": "/Portfolio-Website/static/media/SearchAlgo-Example.8e98c4604e8c4ae1c3b6.png",
+    "static/media/gt-seal.png": "/Portfolio-Website/static/media/gt-seal.a4d69245770977cd2a81.png",
+    "static/media/LinkedIn-Icon-Squircle-Dark.png": "/Portfolio-Website/static/media/LinkedIn-Icon-Squircle-Dark.54188df36ba7b10c53a7.png",
+    "index.html": "/Portfolio-Website/index.html",
+    "main.94941bb3.css.map": "/Portfolio-Website/static/css/main.94941bb3.css.map",
+    "main.d7c9eb61.js.map": "/Portfolio-Website/static/js/main.d7c9eb61.js.map",
+    "453.2fa4fd9b.chunk.js.map": "/Portfolio-Website/static/js/453.2fa4fd9b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94941bb3.css",
+    "static/js/main.d7c9eb61.js"
+  ]
+}
