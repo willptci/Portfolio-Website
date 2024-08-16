@@ -27,7 +27,7 @@ const PortfolioHeader = () => {
               <a href="https://github.com/willptci" target="_blank" rel="noopener noreferrer"><img src={gitLogo} alt="gitLogo" className='link-logo'/>willptci</a>
             </div>
             <div className="Bottom-links">
-              <a href="mailto:your-email@example.com"><img src={emailLogo} alt="email_img" className='link-logo'/>Email</a>
+              <a href="mailto:will.parrish@gtbeta.org"><img src={emailLogo} alt="email_img" className='link-logo'/>Email</a>
               <a href="mailto:your-email@example.com"><img src={resumeLogo} alt="resume_img" className='link-logo'/>Resume</a>
             </div>
         </div>

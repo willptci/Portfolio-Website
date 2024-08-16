@@ -7,6 +7,7 @@ import TalkingMojoLink from './TalkingMojoLink';
 import TalkingMojo from './TalkingMojo';
 import SpotifyWrapped from './SpotifyWrappedLink';
 import SpotifyWrappedLink from './SpotifyWrappedLink';
+import SearchAlgoVisApp from './SearchAlgoVisApp';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           />
           <Route path="/TalkingMojo" element={<TalkingMojo />} />
           <Route path="/SpotifyWrapped" element={<SpotifyWrapped />} />
+          <Route path="/SearchAlgoVisApp" element={<SearchAlgoVisApp />} />
           {/* Redirect all other paths to Home */}
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
