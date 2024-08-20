@@ -11,7 +11,7 @@ const TalkingMojo = () => {
     const handleStart = async () => {
         setShowVideo(true);
         try {
-            await axios.post('http://127.0.0.1:5000/start_video');
+            await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/start_video');
         } catch (error) {
             console.error('Error starting video feed:', error);
         }
@@ -20,7 +20,7 @@ const TalkingMojo = () => {
     const handleStop = async () => {
         setShowVideo(false);
         try {   
-            await axios.post('http://127.0.0.1:5000/stop_video');
+            await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/stop_video');
         } catch (error) {
             console.error('Error stopping video feed:', error);
         }
@@ -29,12 +29,12 @@ const TalkingMojo = () => {
     const checkForNewTTS = async () => {
         try {
             // Fetch the latest TTS text from the backend
-            const textResponse = await axios.get('http://127.0.0.1:5000/get_latest_text');
+            const textResponse = await axios.get('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/get_latest_text');
             const text = textResponse.data.text;
     
             if (text) {
                 // Send text as JSON in the request body
-                const ttsResponse = await axios.post('http://127.0.0.1:5000/tts', { text }, { responseType: 'blob' });
+                const ttsResponse = await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/tts', { text }, { responseType: 'blob' });
                 const audioBlob = new Blob([ttsResponse.data], { type: 'audio/mpeg' });
                 const audioUrl = URL.createObjectURL(audioBlob);
                 if (audioRef.current) {
@@ -81,7 +81,7 @@ const TalkingMojo = () => {
                     <div>
                         <h2>Live Video Feed</h2>
                         <img
-                        src="http://127.0.0.1:5000/video_feed"
+                        src="https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/video_feed"
                         alt="Live Video Feed"
                         style={{ width: '500px' }}
                         />
