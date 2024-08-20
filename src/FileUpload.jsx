@@ -17,7 +17,7 @@ const FileUpload = () => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/upload', formData, {
+      const response = await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
