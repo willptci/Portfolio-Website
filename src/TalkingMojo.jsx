@@ -2,6 +2,7 @@ import React, { useState , useRef, useEffect } from 'react';
 import axios from 'axios';
 import FileUpload from './FileUpload';
 import MojoVid from './img/MojoVid.mp4';
+import WebcamStream from './WebcamStream';
 
 const TalkingMojo = () => {
 
@@ -10,20 +11,20 @@ const TalkingMojo = () => {
 
     const handleStart = async () => {
         setShowVideo(true);
-        try {
-            await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/start_video');
-        } catch (error) {
-            console.error('Error starting video feed:', error);
-        }
+        //try {
+        //    await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/start_video');
+        //} catch (error) {
+        //    console.error('Error starting video feed:', error);
+        //}
     };
 
     const handleStop = async () => {
         setShowVideo(false);
-        try {   
-            await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/stop_video');
-        } catch (error) {
-            console.error('Error stopping video feed:', error);
-        }
+        //try {   
+        //    await axios.post('https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/stop_video');
+        //} catch (error) {
+        //    console.error('Error stopping video feed:', error);
+        //}
     };
 
     const checkForNewTTS = async () => {
@@ -50,7 +51,7 @@ const TalkingMojo = () => {
     useEffect(() => {
         let intervalId;
         if (showVideo) {
-            intervalId = setInterval(checkForNewTTS, 10000); // Check every 10 seconds
+            intervalId = setInterval(checkForNewTTS, 11000); // Check every 10 seconds
         }
         return () => clearInterval(intervalId);
     }, [showVideo]);
@@ -71,22 +72,17 @@ const TalkingMojo = () => {
             </div>
             <h2 className='upload-image-title'>Upload Image for Face Recognition</h2>
             <div className='button-vid-container'>
-                <FileUpload/>
+                <div className='upload-container'>
+                    <FileUpload/>
+                    <p className='Introduction'> To make this project accessible on my site, I used a Flask backend, hosted on Heroku.</p>
+                </div>
                 <div className='video-feed-container'>
                     <div className='upload-buttons'>
                         <button onClick={handleStart} disabled={showVideo}>Start</button>
                         <button onClick={handleStop} disabled={!showVideo}>Stop</button>
                     </div>
-                    {showVideo && (
-                    <div>
-                        <h2>Live Video Feed</h2>
-                        <img
-                        src="https://mojo-portfolio-flask-backend-faed9792e71b.herokuapp.com/video_feed"
-                        alt="Live Video Feed"
-                        style={{ width: '500px' }}
-                        />
-                    </div>
-                    )}
+                    <h2>Live Video Feed</h2>
+                    {showVideo && <WebcamStream/>}
                 </div>
             </div>
             <audio ref={audioRef} style={{ display: 'none' }} />

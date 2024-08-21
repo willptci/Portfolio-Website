@@ -223,6 +223,12 @@ a, .background-container {
   margin-top: 50px;
 }
 
+.upload-container {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .video-feed-container {
   justify-content: center;
   align-items: center;
